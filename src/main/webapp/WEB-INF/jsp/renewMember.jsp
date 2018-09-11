@@ -22,7 +22,7 @@
 }
 </style>
 
-
+<link rel="stylesheet" type="text/css" href="/eMembership/resources/css/login.css">
 </head>
 <body>
 <h1>Irvine No.1 Celtic Sports Club</h1>
@@ -82,7 +82,7 @@
 		</tr>
 		<tr>	
 			<td colspan="3">
-			<input type="submit" value="Renew"/></td>
+			<input type="submit" value="Renew" class="buttons"/></td>
 		</tr>
 </table>
 </form:form>

@@ -5,9 +5,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>IrvineCSC Login Page</title>
-<style type="text/css">
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>IrvineCSC Login Page</title>
+	<style type="text/css">
 	.errorblock {
 		color: #ff0000;
 		background-color: #ffEEEE;
@@ -15,11 +15,14 @@
 		padding: 8px;
 		margin: 16px;
 	}
-</style>
+	</style>
+	<link rel="stylesheet" type="text/css" href="/eMembership/resources/css/login.css">
 </head>
 
 <body onload='document.f.j_username.focus();'>
-	<h3>IrvineCSC Login Page</h3>
+	<h1>Irvine#1 Celtic Sports Club</h1>
+	<h1>Login</h1>
+	
 	<c:if test="${not empty error}">
 		<div class="errorblock">
 			Your login was unsuccessful. <br />
@@ -31,25 +34,24 @@
 	<!-- input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/-->
 		<table>
 			<tr>
-				<td>User:</td>
-				<td><input type="text" name="j_username" value=""></td>
+				
+				<td><input type="text" name="j_username" placeholder="username" class="userdetailsTextbox"></td>
 			</tr>
 			
 			<tr>
-				<td>Password:</td>
-				<td><input type="password" name="j_password"></td>
+				
+				<td><input type="password" name="j_password" placeholder="password" class="userdetailsTextbox"></td>
+			</tr>
+			<tr></tr><tr></tr>
+			<tr>
+				<td colspan="2"><input type="submit" name="Submit" value="LOGIN" class="buttons"> </td>
 			</tr>
 			
-			<tr>
-				<td colspan="2"><input type="submit" name="Submit" value="Submit"></td>
-			</tr>
-			
-			<tr>
-				<td colspan="2"><input type="reset" name="reset"></td>
-			</tr>
 		</table>
 	
 	</form>
+	<p> Forgotten password? Click <a href="resetPassword.html" >here</a> to Reset</p>
+	<p> Still to Register? Click <a href="register.html" >here</a></p>
 	
 </body>
 </html>
