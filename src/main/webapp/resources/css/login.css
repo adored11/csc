@@ -13,29 +13,39 @@ table {
 display: inline-block;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 25px;
+    border-radius: 50px;
     border: 2px solid green;
     background: green;
-    padding: 20px;
+    padding: 25px;
     border-collapse:separate;
-    border-spacing:0 15px;
+    border-spacing:100px 10px;
+    font-family: Sans Serif;
     color: white;
 }
 
- #homeScreenButtons {
+
+#userdetailstable td {
+	text-align: left;
+	padding:2px;
+	border: none;
+	font-size: larger;
+	font-weight: bold;
+}
+
+#homeScreenButtons {
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
- }
+}
  
- .userdetailsTextbox {
+.userdetailsTextbox {
  	font-size:16pt;
  	height:30px;
  	width:300px;
  	border: none;
- }
+}
  
- .buttons {
+.buttons {
     background-color: white;
     border: none;
     color: green;
@@ -50,6 +60,37 @@ display: inline-block;
     border-radius: 50%;
 }
 
+.buttonsOpposite {
+    background-color: green;
+    border: none;
+    color: white;
+    font-family: Cooper;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.Ed_Conf_Details {
+	background-color: white;
+    border: none;
+    color: green;
+    font-family: Cooper;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-left: 100px;
+    margin-right: 100px;
+}
 
 
 

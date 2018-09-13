@@ -22,13 +22,14 @@
 	<div>
 		<h1>
 			Irvine#1 Celtic Sports Club
-			<!--sec:authentication property="name" /-->
 		</h1>
 		<h1>Member's Zone</h1>
+			<!-- sec:authentication var="principal" property="principal" /-->
+		
+		${principal.username}
 		<div id="homeScreenButtons">	
-			<a href="renewMember.html"> <img src="./resources/images/greenButton_login.png" alt="Login"/> </a>
-			<a href="renewMember2.html"> <img src="./resources/images/greenButton_reg.png" alt="Register"/> </a>
-			<a href="<c:url value="/getMember/1" />" ><img src="./resources/images/greenButton_reg.png" alt="Register"/></a>
+			<a href="myDetails.html"> <img src="./resources/images/greenButton_login.png" alt="Login"/> </a>
+			<a href="myDetails.html"> <img src="./resources/images/greenButton_reg.png" alt="Register"/> </a>
 		</div>
 		
 	</div>

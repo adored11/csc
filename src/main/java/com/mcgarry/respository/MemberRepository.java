@@ -8,7 +8,7 @@ public interface MemberRepository {
 	
 	List<MemberDetails> createMember(MemberDetails member);
 
-	MemberDetails getMember(Integer memberId);
+	MemberDetails getMember(String userName);
 
 	List<MemberDetails> getAllMembers();
 

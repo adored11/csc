@@ -6,7 +6,7 @@ import com.mcgarry.model.MemberDetails;
 
 public interface MemberService {
 
-	MemberDetails getMember(Integer memberId);
+	MemberDetails getMember(String userName);
 
 	List<MemberDetails> createMember(MemberDetails member);
 

@@ -1,1 +1,0 @@
-<jsp:forward page="/getMember/1"></jsp:forward>

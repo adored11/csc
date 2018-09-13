@@ -23,9 +23,9 @@ public class MemberServiceImpl implements MemberService {
 	private MemberRepository memberRepository;
 
 	@Override
-	public MemberDetails getMember(Integer memberId) {
-		System.out.println("memberID : " + memberId);
-		return memberRepository.getMember(memberId);
+	public MemberDetails getMember(String userName) {
+		System.out.println("memberID : " + userName);
+		return memberRepository.getMember(userName);
 	}
 	
 	

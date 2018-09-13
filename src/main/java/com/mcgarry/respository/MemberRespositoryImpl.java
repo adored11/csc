@@ -37,8 +37,8 @@ public class MemberRespositoryImpl implements MemberRepository{
 	}
 	
 	@Override
-	public MemberDetails getMember(Integer memberId) {
-		MemberDetails member = jdbcTemplate.queryForObject("select * from userdetails where membershipNo = ?", new MemberRowMapper(), memberId);
+	public MemberDetails getMember(String userName) {
+		MemberDetails member = jdbcTemplate.queryForObject("select * from userdetails where username = ?", new MemberRowMapper(), userName);
 		
 		return member;
 	}
