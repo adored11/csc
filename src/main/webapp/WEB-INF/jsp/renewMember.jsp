@@ -28,7 +28,7 @@
 <h1>Irvine No.1 Celtic Sports Club</h1>
 <hr>
 <h2>Membership Renewal Form</h2>
-<form:form commandName="memberDetails">
+<form:form commandName="renewMember">
 <form:errors path="*" cssClass="errorblock" element="div" />
 <table>
 		<tr>

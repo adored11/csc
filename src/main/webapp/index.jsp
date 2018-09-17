@@ -29,7 +29,7 @@
 		${principal.username}
 		<div id="homeScreenButtons">	
 			<a href="myDetails.html"> <img src="./resources/images/greenButton_login.png" alt="Login"/> </a>
-			<a href="myDetails.html"> <img src="./resources/images/greenButton_reg.png" alt="Register"/> </a>
+			<a href="register.html"> <img src="./resources/images/greenButton_reg.png" alt="Register"/> </a>
 		</div>
 		
 	</div>

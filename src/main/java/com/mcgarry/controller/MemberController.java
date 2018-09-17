@@ -1,6 +1,9 @@
 package com.mcgarry.controller;
 
 import java.util.List;
+
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpStatus;
@@ -8,14 +11,25 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.context.request.WebRequest;
+import org.springframework.web.servlet.ModelAndView;
+
 import com.mcgarry.model.MemberDetails;
+import com.mcgarry.model.Person;
+import com.mcgarry.model.User;
+
 import com.mcgarry.service.MemberService;
+import com.mcgarry.service.PersonService;
 import com.mcgarry.util.ServiceError;
 
 @Controller
@@ -25,6 +39,10 @@ public class MemberController {
 
 	@Autowired
 	private MemberService memberService;
+	@Autowired
+    PersonService personservice;
+	
+	
 
 	@RequestMapping(value = "/myDetails", method = RequestMethod.GET)
 	public String myDetails(Model model) {
@@ -44,6 +62,23 @@ public class MemberController {
 		
 		return "myDetails";
 	}
+	
+	@RequestMapping(value = "/register", method = {RequestMethod.POST, RequestMethod.GET})
+    public String sendWithAttach(ModelMap model,@ModelAttribute("info") Person info, BindingResult br) {
+		Person personDetails = new Person();
+		System.out.println("register Test1: " + personDetails.getName());
+      
+     if (!br.hasErrors())
+        {
+    	 System.out.println("register Test2: " + personDetails.getName());
+         //Person saveData = personservice.save(info);
+         //model.addAttribute("saveData",saveData);
+        }
+     
+     System.out.println("register Test3: " + personDetails.getName());
+    // return "renewMember";
+     return "register";
+ }
 
 	/*
 	 * @RequestMapping(value="renewMember", method=RequestMethod.POST) public String
@@ -78,6 +113,11 @@ public class MemberController {
 
 		return "userAdminArea";
 	}
+	
+
+	
+	
+	
 
 	@RequestMapping(value = "/getMember/{userName}", method = RequestMethod.GET)
 	public @ResponseBody MemberDetails getMember(@PathVariable(value = "userName") String userName) {
