@@ -29,18 +29,18 @@
 			Caused: ${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message }
 		</div>
 	</c:if>
-	
-	<form action="j_spring_security_check" name="f" method="post">
-	<!-- input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/-->
+	<% System.out.println("login.jsp before form tag") ; %>
+	<form action="login" name="f" method="post">
+	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 		<table>
 			<tr>
 				
-				<td><input type="text" name="j_username" placeholder="username" class="userdetailsTextbox"></td>
+				<td><input type="text" name="username" placeholder="username" class="userdetailsTextbox"></td>
 			</tr>
 			
 			<tr>
 				
-				<td><input type="password" name="j_password" placeholder="password" class="userdetailsTextbox"></td>
+				<td><input type="password" name="password" placeholder="password" class="userdetailsTextbox"></td>
 			</tr>
 			<tr></tr><tr></tr>
 			<tr>
@@ -50,6 +50,7 @@
 		</table>
 	
 	</form>
+	<% System.out.println("login.jsp after form tag") ; %>
 	<p> Forgotten password? Click <a href="resetPassword.html" >here</a> to Reset</p>
 	<p> Still to Register? Click <a href="register.html" >here</a></p>
 	
